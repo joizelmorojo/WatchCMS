@@ -41,7 +41,7 @@ export default async function Blog({
     filters: { locale: params.locale },
   }, false)
 
-  const localizedSlugs = blogPage.localizations?.reduce(
+  const localizedSlugs = blogPage?.localizations?.reduce(
     (acc: Record<string, string>, localization: any) => {
       acc[localization.locale] = "blog";
       return acc;
@@ -59,18 +59,18 @@ export default async function Blog({
             <IconClipboardText className="h-6 w-6 text-white" />
           </FeatureIconContainer>
           <Heading as="h1" className="mt-4">
-            {blogPage.heading}
+            {blogPage?.heading}
           </Heading>
           <Subheading className="max-w-3xl mx-auto">
-            {blogPage.sub_heading}
+            {blogPage?.sub_heading}
           </Subheading>
         </div>
 
-        {articles.data.slice(0, 1).map((article: Article) => (
+        {(articles?.data ?? []).slice(0, 1).map((article: Article) => (
           <BlogCard article={article} locale={params.locale} key={article.title} />
         ))}
 
-        <BlogPostRows articles={articles.data} />
+        <BlogPostRows articles={articles?.data} />
       </Container>
     </div>
   );

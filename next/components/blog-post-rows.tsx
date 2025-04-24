@@ -34,10 +34,10 @@ export const BlogPostRows = ({ articles }: { articles: Article[] }) => {
       </div>
 
       <div className="divide-y divide-neutral-800">
-        {results.length === 0 ? (
+        {results?.length === 0 ? (
           <p className="text-neutral-400 text-center p-4">No results found</p>
         ) : (
-          results.map((article, index) => (
+          (results ?? []).map((article, index) => (
             <BlogPostRow article={article} key={article.slug + index} />
           ))
         )}
