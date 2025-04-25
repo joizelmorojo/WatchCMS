@@ -68,13 +68,13 @@ export const Footer = async ({ data, locale }: { data: any, locale: string }) =>
   );
 };
 
-const LinkSection = ({ links, locale }: { links: { text: string; URL: never | string }[], locale: string }) => (
+const LinkSection = ({ links, locale }: { links: { text: string; url: never | string }[], locale: string }) => (
   <div className="flex justify-center space-y-4 flex-col mt-4">
     {(links ?? []).map((link) => (
       <Link
         key={link.text}
         className="transition-colors hover:text-neutral-400 text-muted text-xs sm:text-sm"
-        href={`${link.URL.startsWith('http') ? '' : `/${locale}`}${link.URL}`}
+        href={`${link.url.startsWith('http') ? '' : `/${locale}`}${link.url}`}
       >
         {link.text}
       </Link>

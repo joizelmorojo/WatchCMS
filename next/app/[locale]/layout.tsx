@@ -26,7 +26,7 @@ export async function generateMetadata({
     const pageData = await fetchContentType(
         'global',
         {
-            filters: { locale: params.locale },
+            filters: { locale: params?.locale },
             populate: "seo.metaImage",
         },
         true
@@ -46,6 +46,7 @@ export default async function LocaleLayout({
 }) {
 
     const pageData = await fetchContentType('global', { filters: { locale } }, true);
+    console.log("pageData?.navbar", pageData?.navbar);
     return (
         <html lang={locale}>
             <ViewTransitions>

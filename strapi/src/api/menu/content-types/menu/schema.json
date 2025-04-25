@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "menu_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-item"
+    },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-section"
+    },
+    "social_section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-media-icon-links"
+    }
+  }
+}

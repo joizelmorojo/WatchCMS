@@ -2,15 +2,16 @@
   "collectionName": "components_shared_links",
   "info": {
     "displayName": "Link",
-    "icon": "link"
+    "icon": "link",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
       "type": "string"
     },
-    "URL": {
-      "type": "string"
+    "url": {
+      "type": "text"
     },
     "target": {
       "type": "enumeration",

@@ -45,15 +45,17 @@ export const DesktopNavbar = ({ leftNavbarItems, rightNavbarItems, logo, locale 
       className={cn(
         "w-full flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto"
       )}
-      animate={{
-        width: showBackground ? "80%" : "100%",
-        background: showBackground ? "var(--neutral-900)" : "transparent",
-      }}
-      transition={{
-        duration: 0.4,
-      }}
+      // ... remove animation
+      // animate={{
+      //   width: showBackground ? "80%" : "100%",
+      //   background: showBackground ? "var(--neutral-900)" : "transparent",
+      // }}
+      // transition={{
+      //   duration: 0.4,
+      // }}
     >
-      <AnimatePresence>
+      {/* // ... remove animation */}
+      {/* <AnimatePresence>
         {showBackground && (
           <motion.div
             key={String(showBackground)}
@@ -65,7 +67,7 @@ export const DesktopNavbar = ({ leftNavbarItems, rightNavbarItems, logo, locale 
             className="absolute inset-0 h-full w-full bg-neutral-900 pointer-events-none [mask-image:linear-gradient(to_bottom,white,transparent,white)] rounded-full"
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <div className="flex flex-row gap-2 items-center">
         <Logo locale={locale} image={logo?.image} />
         <div className="flex items-center gap-1.5">

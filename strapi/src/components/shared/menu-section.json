@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_menu_sections",
+  "info": {
+    "displayName": "Menu_Section",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

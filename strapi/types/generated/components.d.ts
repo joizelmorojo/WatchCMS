@@ -249,10 +249,8 @@ export interface GlobalFooter extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    built_with: Schema.Attribute.String;
     copyright: Schema.Attribute.String;
     description: Schema.Attribute.String;
-    designed_developed_by: Schema.Attribute.String;
     internal_links: Schema.Attribute.Component<'shared.link', true>;
     logo: Schema.Attribute.Relation<'oneToOne', 'api::logo.logo'>;
     policy_links: Schema.Attribute.Component<'shared.link', true>;
@@ -263,12 +261,19 @@ export interface GlobalFooter extends Struct.ComponentSchema {
 export interface GlobalNavbar extends Struct.ComponentSchema {
   collectionName: 'components_global_navbars';
   info: {
+    description: '';
     displayName: 'Navbar';
     icon: 'bold';
   };
   attributes: {
     left_navbar_items: Schema.Attribute.Component<'shared.link', true>;
     logo: Schema.Attribute.Relation<'oneToOne', 'api::logo.logo'>;
+    menu_items: Schema.Attribute.Component<'shared.menu-item', true>;
+    menu_section: Schema.Attribute.Component<'shared.menu-section', true>;
+    menu_social_section: Schema.Attribute.Component<
+      'shared.social-media-icon-links',
+      true
+    >;
     right_navbar_items: Schema.Attribute.Component<'shared.link', true>;
   };
 }
@@ -401,6 +406,7 @@ export interface SharedLaunches extends Struct.ComponentSchema {
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
+    description: '';
     displayName: 'Link';
     icon: 'link';
   };
@@ -409,7 +415,37 @@ export interface SharedLink extends Struct.ComponentSchema {
       ['_blank', '_self', '_parent', '_top']
     >;
     text: Schema.Attribute.String;
-    URL: Schema.Attribute.String;
+    url: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_menu_items';
+  info: {
+    description: '';
+    displayName: 'Menu_Item';
+    icon: 'dashboard';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    label: Schema.Attribute.Text;
+    url: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedMenuSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_menu_sections';
+  info: {
+    description: '';
+    displayName: 'Menu_Section';
+    icon: 'dashboard';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'shared.link', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -534,6 +570,8 @@ declare module '@strapi/strapi' {
       'shared.form': SharedForm;
       'shared.launches': SharedLaunches;
       'shared.link': SharedLink;
+      'shared.menu-item': SharedMenuItem;
+      'shared.menu-section': SharedMenuSection;
       'shared.perks': SharedPerks;
       'shared.section': SharedSection;
       'shared.seo': SharedSeo;
