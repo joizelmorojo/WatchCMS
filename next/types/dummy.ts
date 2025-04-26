@@ -8,15 +8,63 @@ export const productCategories: ProductCategory[] = [
         title: "Elegant Rose Gold",
         price: "$299",
         image: "https://images.unsplash.com/photo-1549972574-8e3e1ed6a347",
-        description: "Classic elegance meets modern design"
+        description: "Classic elegance meets modern design",
       },
       {
         title: "Diamond Collection",
         price: "$499",
         image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e",
-        description: "Luxurious diamond-studded timepiece"
-      }
-    ]
+        description: "Luxurious diamond-studded timepiece",
+      },
+      {
+        title: "Pearl Serenity",
+        price: "$349",
+        image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7",
+        description: "Timeless pearl-accented watch",
+      },
+      {
+        title: "Floral Grace",
+        price: "$279",
+        image: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e",
+        description: "Delicate floral-inspired design",
+      },
+      {
+        title: "Silver Charm",
+        price: "$319",
+        image: "https://images.unsplash.com/photo-1549972891-8e3e1ed6a347",
+        description: "Sleek silver watch with minimalist appeal",
+      },
+      {
+        title: "Blush Elegance",
+        price: "$359",
+        image: "https://images.unsplash.com/photo-1523177577-292159ed9e76",
+        description: "Soft blush tones for subtle sophistication",
+      },
+      {
+        title: "Crystal Blossom",
+        price: "$429",
+        image: "https://images.unsplash.com/photo-1517466786969-9c0c3b3b8e56",
+        description: "Crystal accents with floral motifs",
+      },
+      {
+        title: "Midnight Star",
+        price: "$389",
+        image: "https://images.unsplash.com/photo-1539874754764-5a4a6f6093c9",
+        description: "Dark dial with sparkling star details",
+      },
+      {
+        title: "Golden Whisper",
+        price: "$339",
+        image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3",
+        description: "Lightweight gold watch for everyday wear",
+      },
+      {
+        title: "Sapphire Glow",
+        price: "$469",
+        image: "https://images.unsplash.com/photo-1508050919630-b135583b29ab",
+        description: "Sapphire-blue dial with elegant straps",
+      },
+    ],
   },
   {
     title: "Diamond Watches",
@@ -25,15 +73,63 @@ export const productCategories: ProductCategory[] = [
         title: "Royal Diamond",
         price: "$999",
         image: "https://images.unsplash.com/photo-1619946794135-5bc917a27793",
-        description: "Premium diamond-encrusted watch"
+        description: "Premium diamond-encrusted watch",
       },
       {
         title: "Crystal Elite",
         price: "$799",
         image: "https://images.unsplash.com/photo-1619946928632-abefa12506e2",
-        description: "Sophisticated crystal design"
-      }
-    ]
+        description: "Sophisticated crystal design",
+      },
+      {
+        title: "Starlight Sparkle",
+        price: "$899",
+        image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
+        description: "Dazzling diamond and crystal masterpiece",
+      },
+      {
+        title: "Diamond Prestige",
+        price: "$1,099",
+        image: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6",
+        description: "Bold diamond accents for luxury lovers",
+      },
+      {
+        title: "Eternal Shine",
+        price: "$949",
+        image: "https://images.unsplash.com/photo-1623998022290-a74f8cc36563",
+        description: "Timeless shine with diamond bezel",
+      },
+      {
+        title: "Radiant Luxe",
+        price: "$1,199",
+        image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+        description: "Radiant design with sparkling diamonds",
+      },
+      {
+        title: "Frosted Gem",
+        price: "$879",
+        image: "https://images.unsplash.com/photo-1517423440428-332a48f633e8",
+        description: "Cool-toned diamond watch with modern flair",
+      },
+      {
+        title: "Opal Diamond",
+        price: "$1,049",
+        image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26",
+        description: "Opal and diamond fusion for unique elegance",
+      },
+      {
+        title: "Celestial Brilliance",
+        price: "$1,299",
+        image: "https://images.unsplash.com/photo-1509048197707-224d073ab2ae",
+        description: "Celestial-inspired diamond timepiece",
+      },
+      {
+        title: "Diamond Horizon",
+        price: "$1,149",
+        image: "https://images.unsplash.com/photo-1533139508707-368c7d7c4e0e",
+        description: "Horizon-inspired diamond detailing",
+      },
+    ],
   },
   {
     title: "Sports Watches",
@@ -42,14 +138,257 @@ export const productCategories: ProductCategory[] = [
         title: "Chronograph Pro",
         price: "$399",
         image: "https://images.unsplash.com/photo-1623998022290-a74f8cc36563",
-        description: "Professional sports chronograph"
+        description: "Professional sports chronograph",
       },
       {
         title: "Diver's Edition",
         price: "$599",
         image: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6",
-        description: "Water-resistant diving watch"
-      }
-    ]
-  }
+        description: "Water-resistant diving watch",
+      },
+      {
+        title: "Adventure Pulse",
+        price: "$449",
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+        description: "Rugged watch for outdoor enthusiasts",
+      },
+      {
+        title: "Sprint Master",
+        price: "$379",
+        image: "https://images.unsplash.com/photo-1519225522366-737a793d11eb",
+        description: "High-performance watch for runners",
+      },
+      {
+        title: "Tactical Core",
+        price: "$429",
+        image: "https://images.unsplash.com/photo-1559056199-6d4d5d65a7e6",
+        description: "Durable tactical watch for extreme conditions",
+      },
+      {
+        title: "Aqua Force",
+        price: "$549",
+        image: "https://images.unsplash.com/photo-1511497482980-0c0318d3e3ef",
+        description: "Robust watch for water sports",
+      },
+      {
+        title: "Peak Pulse",
+        price: "$469",
+        image: "https://images.unsplash.com/photo-1519227356667-8b4e7f3c8e6b",
+        description: "Designed for mountain adventurers",
+      },
+      {
+        title: "Velocity Strike",
+        price: "$419",
+        image: "https://images.unsplash.com/photo-1554244933-6e8a2b7c85d8",
+        description: "Sleek watch for high-speed activities",
+      },
+      {
+        title: "Endurance Pro",
+        price: "$489",
+        image: "https://images.unsplash.com/photo-1523177577-292159ed9e76",
+        description: "Built for long-distance athletes",
+      },
+      {
+        title: "Rugged Trail",
+        price: "$459",
+        image: "https://images.unsplash.com/photo-1517466786969-9c0c3b3b8e56",
+        description: "Tough watch for off-road adventures",
+      },
+    ],
+  },
+  {
+    title: "Men's Classic Watches",
+    products: [
+      {
+        title: "Heritage Black",
+        price: "$399",
+        image: "https://images.unsplash.com/photo-1508050919630-b135583b29ab",
+        description: "Timeless black leather classic",
+      },
+      {
+        title: "Steel Commander",
+        price: "$499",
+        image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3",
+        description: "Bold stainless steel design",
+      },
+      {
+        title: "Vintage Chrono",
+        price: "$549",
+        image: "https://images.unsplash.com/photo-1535448037415-2c6e7eb7db86",
+        description: "Retro-inspired chronograph",
+      },
+      {
+        title: "Navy Executive",
+        price: "$429",
+        image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
+        description: "Sophisticated navy dial for professionals",
+      },
+      {
+        title: "Classic Gold",
+        price: "$479",
+        image: "https://images.unsplash.com/photo-1549972574-8e3e1ed6a347",
+        description: "Elegant gold-toned classic watch",
+      },
+      {
+        title: "Brown Legacy",
+        price: "$409",
+        image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7",
+        description: "Rich brown leather for timeless style",
+      },
+      {
+        title: "Silver Prestige",
+        price: "$459",
+        image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e",
+        description: "Sleek silver watch with modern touches",
+      },
+      {
+        title: "Midnight Classic",
+        price: "$439",
+        image: "https://images.unsplash.com/photo-1619946794135-5bc917a27793",
+        description: "Dark dial with classic detailing",
+      },
+      {
+        title: "Urban Elite",
+        price: "$469",
+        image: "https://images.unsplash.com/photo-1619946928632-abefa12506e2",
+        description: "Contemporary design for city dwellers",
+      },
+      {
+        title: "Timeless Bronze",
+        price: "$489",
+        image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+        description: "Bronze finish for a vintage look",
+      },
+    ],
+  },
+  {
+    title: "Smart Watches",
+    products: [
+      {
+        title: "TechTrend Pro",
+        price: "$299",
+        image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+        description: "Advanced fitness and smart features",
+      },
+      {
+        title: "Connect Elite",
+        price: "$349",
+        image: "https://images.unsplash.com/photo-1517423440428-332a48f633e8",
+        description: "Sleek smartwatch with notifications",
+      },
+      {
+        title: "Pulse Tracker",
+        price: "$279",
+        image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26",
+        description: "Health-focused smartwatch",
+      },
+      {
+        title: "Smart Core",
+        price: "$319",
+        image: "https://images.unsplash.com/photo-1519225522366-737a793d11eb",
+        description: "Essential smart features in a compact design",
+      },
+      {
+        title: "Fitness Edge",
+        price: "$339",
+        image: "https://images.unsplash.com/photo-1559056199-6d4d5d65a7e6",
+        description: "Optimized for fitness tracking",
+      },
+      {
+        title: "Urban Pulse",
+        price: "$309",
+        image: "https://images.unsplash.com/photo-1511497482980-0c0318d3e3ef",
+        description: "Stylish smartwatch for urban lifestyles",
+      },
+      {
+        title: "Active Sync",
+        price: "$329",
+        image: "https://images.unsplash.com/photo-1519227356667-8b4e7f3c8e6b",
+        description: "Syncs seamlessly with your devices",
+      },
+      {
+        title: "Tech Spark",
+        price: "$299",
+        image: "https://images.unsplash.com/photo-1554244933-6e8a2b7c85d8",
+        description: "Vibrant smartwatch for tech enthusiasts",
+      },
+      {
+        title: "Vitality Pro",
+        price: "$359",
+        image: "https://images.unsplash.com/photo-1509048197707-224d073ab2ae",
+        description: "Advanced health and wellness tracking",
+      },
+      {
+        title: "Connect Lite",
+        price: "$289",
+        image: "https://images.unsplash.com/photo-1533139508707-368c7d7c4e0e",
+        description: "Lightweight smartwatch for everyday use",
+      },
+    ],
+  },
+  {
+    title: "Luxury Watches",
+    products: [
+      {
+        title: "Gold Majesty",
+        price: "$1,499",
+        image: "https://images.unsplash.com/photo-1517466786969-9c0c3b3b8e56",
+        description: "Opulent gold-plated masterpiece",
+      },
+      {
+        title: "Platinum Prestige",
+        price: "$1,999",
+        image: "https://images.unsplash.com/photo-1523177577-292159ed9e76",
+        description: "Exquisite platinum luxury watch",
+      },
+      {
+        title: "Sapphire Royale",
+        price: "$1,799",
+        image: "https://images.unsplash.com/photo-1539874754764-5a4a6f6093c9",
+        description: "Sapphire-accented luxury timepiece",
+      },
+      {
+        title: "Emerald Splendor",
+        price: "$1,699",
+        image: "https://images.unsplash.com/photo-1508050919630-b135583b29ab",
+        description: "Emerald-green dial with gold accents",
+      },
+      {
+        title: "Diamond Monarch",
+        price: "$2,199",
+        image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3",
+        description: "Regal design with diamond embellishments",
+      },
+      {
+        title: "Onyx Elite",
+        price: "$1,899",
+        image: "https://images.unsplash.com/photo-1535448037415-2c6e7eb7db86",
+        description: "Sleek onyx-black luxury watch",
+      },
+      {
+        title: "Rose Gold Opulence",
+        price: "$1,799",
+        image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
+        description: "Rose gold with intricate detailing",
+      },
+      {
+        title: "Pearl Majesty",
+        price: "$1,999",
+        image: "https://images.unsplash.com/photo-1549972574-8e3e1ed6a347",
+        description: "Pearl inlays for unmatched elegance",
+      },
+      {
+        title: "Silver Grandeur",
+        price: "$1,749",
+        image: "https://images.unsplash.com/photo-1609587312208-cea54be969e7",
+        description: "Silver luxury with timeless appeal",
+      },
+      {
+        title: "Ruby Prestige",
+        price: "$2,099",
+        image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e",
+        description: "Ruby-red accents for bold luxury",
+      },
+    ],
+  },
 ];

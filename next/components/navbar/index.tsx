@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { DesktopNavbar } from "./desktop-navbar";
 import { MobileNavbar } from "./mobile-navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { LocaleSwitcher } from "../locale-switcher";
+import { LocaleDropdown } from "../locale-dropdown";
 import { MenuItem, MenuType, Section } from "@/types/menu";
 import { productCategories } from "@/types/dummy";
+import { ProductCategoryList } from "./product-category";
 
 export function Navbar({ data, locale }: { data: any; locale: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +15,7 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
 
   const menu_section = data?.menu_section as Section[];
   const menu_items = data?.menu_items as MenuItem[];
+  // const productCategories = useMemo(() => data?.productCategories || [], [data?.productCategories]);
 
   return (
     <>
@@ -82,22 +85,54 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.5 }}
+            onAnimationComplete={() => {
+              const hash = window.location.hash.replace('#', '');
+              if (hash) {
+                const section = document.getElementById(hash);
+                if (section) {
+                  setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }
+              }
+            }}
             className="fixed top-0 left-0 z-40 w-full h-screen bg-black/95 backdrop-blur-md text-white flex px-6 py-12"
-            // className="fixed top-0 left-0 z-40 w-full h-screen bg-black/80 backdrop-blur-md text-white px-6 py-12 flex flex-col"
           >
-
             {/* Menu Content */}
-            <div className="w-1/3 p-12 border-r border-white/10">
-            {/* <div className="w-1/3 p-12 flex flex-col gap-8 ml-10 mt-20 mb-20 flex-grow overflow-y-auto mx-auto w-full"> */}
-              {/* Menu Items */}
+            <div className="w-full md:w-1/3 p-6 md:p-12 border-b md:border-b-0 md:border-r border-white/10 max-w-full md:max-w-[400px]">
               <div className="space-y-4">
-                <h2 className="text-xl font-semibold text-yellow-400 mb-4">Main Menu</h2>
+                <h2 className="text-xl font-semibold text-orange-400">Watch Categories</h2>
+                <ul className="space-y-2">
+                  {productCategories.map((category, index) => (
+                    <li key={index}>
+                      <a
+                        href={`#${category.title.replace(/\s+/g, '-')}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const sectionId = category.title.replace(/\s+/g, '-');
+                          const section = document.getElementById(sectionId);
+                          if (section) {
+                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }}
+                        className="hover:underline"
+                      >
+                        {category.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <hr className="border-t border-white/30 my-6" />
+
+              <div className="space-y-2 my-5">
                 {menu_items.map((item: MenuItem, index: number) => (
                   <div key={index}>
                     <a
                       href={item.url}
                       onClick={toggleMenu}
-                      className="text-2xl font-bold hover:text-yellow-400 transition-colors duration-300 block py-2"
+                      className="text-xl font-bold hover:text-orange-400 transition-colors duration-300 block"
                     >
                       {item.label}
                     </a>
@@ -105,9 +140,8 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
                 ))}
               </div>
 
-              {/* Menu Sections */}
               <div className="space-y-6">
-                <h2 className="text-xl font-semibold text-yellow-400 mb-4">Explore More</h2>
+                <h2 className="text-xl font-semibold text-orange-400 mb-4">Explore More</h2>
                 {menu_section.map((section: Section, index: number) => (
                   <div key={index} className="space-y-4">
                     <h3 className="text-lg font-semibold text-white">{section.title}</h3>
@@ -117,7 +151,7 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
                           <a
                             href={link.url}
                             onClick={toggleMenu}
-                            className="text-base hover:text-yellow-400 transition-colors duration-300"
+                            className="text-base hover:text-orange-400 transition-colors duration-300"
                           >
                             {link.text}
                           </a>
@@ -132,56 +166,16 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
               </div>
             </div>
 
-            {/* Right Column - Product Categories */}
-            <div className="w-2/3 p-12 md:p-16 overflow-y-auto">
-              <div className="space-y-16">
-                {productCategories.map((category, index) => (
-                  <div key={index} className="space-y-6">
-                    <h2 className="text-2xl font-semibold text-yellow-400">
-                      {category.title}
-                    </h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                      {category.products.map((product, idx) => (
-                        <div key={idx} className="group cursor-pointer p-4 bg-white/10 rounded-lg">
-                          <div className="relative aspect-square overflow-hidden rounded-lg mb-4">
-                            <img
-                              src={product.image}
-                              alt={product.title}
-                              className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500"
-                            />
-                          </div>
-                          <h3 className="text-lg font-medium">{product.title}</h3>
-                          <p className="text-yellow-400 font-semibold mt-1">
-                            {product.price}
-                          </p>
-                          <p className="text-sm text-gray-400 mt-1">
-                            {product.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+            {/* Product Categories */}
+            <div className="w-full md:w-2/3 p-6 sm:p-8 md:p-12 xl:p-16 overflow-y-auto scroll-smooth max-w-full md:max-w-5xl mx-auto h-screen hide-scrollbar">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+              >
+                <ProductCategoryList categories={productCategories} />
+              </motion.div>
             </div>
-
-            {/* Social Links (Commented Out) */}
-            {/* <div className="flex justify-between items-center mt-10 text-sm">
-              <div className="flex space-x-4">
-                {menu?.social_section?.map((social: any, idx: number) => (
-                  <a
-                    key={idx}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80"
-                  >
-                    <img src={social.image?.url} alt="social" className="h-6 w-6" />
-                  </a>
-                ))}
-              </div>
-            </div> */}
-            {/* <LocaleSwitcher currentLocale={locale} /> */}
           </motion.div>
         )}
       </AnimatePresence>

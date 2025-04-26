@@ -89,6 +89,17 @@ const config: Config = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    function ({ addUtilities }: any) {
+      addUtilities({
+        '.hide-scrollbar': {
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          '-ms-overflow-style': 'none',
+        },
+      });
+    },
   ],
 };
 

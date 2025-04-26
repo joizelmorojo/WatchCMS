@@ -22,3 +22,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.hide-scrollbar {
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* Ensure scrolling is still enabled */
+  -ms-overflow-style: none; /* IE and Edge */
+}
