@@ -33,3 +33,7 @@ body {
   /* Ensure scrolling is still enabled */
   -ms-overflow-style: none; /* IE and Edge */
 }
+
+html, body, span, h2, h3, p, a {
+  font-family: 'Kento';
+}

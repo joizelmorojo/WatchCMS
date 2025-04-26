@@ -47,6 +47,9 @@ const config: Config = {
           "100%": { transform: "rotate(360deg)" },
         },
       },
+      fontFamily: {
+        kento: ['Kento'],
+      },
     },
   },
   plugins: [
