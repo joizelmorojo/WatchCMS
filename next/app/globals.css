@@ -37,3 +37,7 @@ body {
 html, body, span, h2, h3, p, a {
   font-family: 'Kento';
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -714,6 +714,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    bg_section: Schema.Attribute.Component<
+      'dynamic-zone.dynamic-background-section',
+      true
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -729,6 +733,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'dynamic-zone.cta',
         'dynamic-zone.form-next-to-section',
         'dynamic-zone.faq',
+        'dynamic-zone.dynamic-background-section',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

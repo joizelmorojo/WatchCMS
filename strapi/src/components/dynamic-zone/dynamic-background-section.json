@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_dynamic_zone_dynamic_background_sections",
+  "info": {
+    "displayName": "Dynamic_Background_Section",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg_media_link": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "section_large_text": {
+      "type": "text"
+    },
+    "section_small_text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    }
+  }
+}

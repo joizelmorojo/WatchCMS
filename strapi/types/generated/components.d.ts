@@ -89,6 +89,25 @@ export interface DynamicZoneCta extends Struct.ComponentSchema {
   };
 }
 
+export interface DynamicZoneDynamicBackgroundSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_dynamic_background_sections';
+  info: {
+    description: '';
+    displayName: 'Dynamic_Background_Section';
+    icon: 'picture';
+  };
+  attributes: {
+    bg_media_link: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    section_large_text: Schema.Attribute.Text;
+    section_small_text: Schema.Attribute.String;
+    section_title: Schema.Attribute.String;
+    url: Schema.Attribute.Text;
+  };
+}
+
 export interface DynamicZoneFaq extends Struct.ComponentSchema {
   collectionName: 'components_dynamic_zone_faqs';
   info: {
@@ -550,6 +569,7 @@ declare module '@strapi/strapi' {
       'cards.social-media-card': CardsSocialMediaCard;
       'dynamic-zone.brands': DynamicZoneBrands;
       'dynamic-zone.cta': DynamicZoneCta;
+      'dynamic-zone.dynamic-background-section': DynamicZoneDynamicBackgroundSection;
       'dynamic-zone.faq': DynamicZoneFaq;
       'dynamic-zone.features': DynamicZoneFeatures;
       'dynamic-zone.form-next-to-section': DynamicZoneFormNextToSection;

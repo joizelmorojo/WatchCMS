@@ -19,13 +19,14 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
 
   return (
     <>
-      <motion.nav className="fixed top-4 mx-auto inset-x-0 z-50 w-full">
+      {/* <motion.nav className="fixed top-4 mx-auto inset-x-0 z-50 w-full"> */}
+      <motion.nav className="fixed top-4 inset-x-0 z-50 w-full">
         <div className="flex items-center justify-between w-full">
           {/* Menu Button */}
-          <div className="flex items-center space-x-2 ml-10">
+          <div className="flex items-center space-x-2 ml-10 group"> {/* Added 'group' here */}
             <button
               onClick={toggleMenu}
-              className="p-2 z-[60] focus:outline-none w-8 h-8 relative group"
+              className="p-2 z-[60] focus:outline-none w-8 h-8 relative"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               <span
@@ -42,7 +43,7 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
               className="relative text-base font-medium cursor-pointer text-white
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white
                 after:transition-all after:duration-[800ms] after:origin-left
-                hover:after:w-full after:w-0
+                group-hover:after:w-full hover:after:w-full after:w-0  {/* Added group-hover */}
                 after:[transition-property:width] after:[transition-timing-function:ease-in-out]"
               role="button"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -96,7 +97,7 @@ export function Navbar({ data, locale }: { data: any; locale: string }) {
                 }
               }
             }}
-            className="fixed top-0 left-0 z-40 w-full h-screen bg-black/95 backdrop-blur-md text-white flex px-6 py-12"
+            className="fixed top-0 left-0 z-40 w-full h-screen bg-black/85 backdrop-blur-md text-white flex px-6 py-12"
           >
             {/* Menu Content */}
             <div className="w-full md:w-1/3 p-6 md:p-12 border-b md:border-b-0 md:border-r border-white/10 max-w-full md:max-w-[400px]">

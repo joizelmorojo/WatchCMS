@@ -46,7 +46,7 @@ export default async function LocaleLayout({
 }) {
 
     const pageData = await fetchContentType('global', { filters: { locale } }, true);
-    console.log("pageData?.navbar", pageData?.navbar);
+    // console.log("pageData?.navbar", pageData?.navbar);
     return (
         <html lang={locale}>
             <ViewTransitions>

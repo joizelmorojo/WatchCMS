@@ -53,8 +53,14 @@
         "dynamic-zone.launches",
         "dynamic-zone.cta",
         "dynamic-zone.form-next-to-section",
-        "dynamic-zone.faq"
+        "dynamic-zone.faq",
+        "dynamic-zone.dynamic-background-section"
       ]
+    },
+    "bg_section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dynamic-zone.dynamic-background-section"
     }
   }
 }

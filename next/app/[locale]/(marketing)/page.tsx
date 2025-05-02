@@ -15,7 +15,7 @@ export async function generateMetadata({
     'pages',
     {
       filters: {
-        slug: "homepage",
+        slug: "home",
         locale: params.locale,
       },
       populate: "seo.metaImage",
@@ -34,7 +34,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
     'pages',
     {
       filters: {
-        slug: "homepage",
+        slug: "home",
         locale: params.locale,
       },
     },
