@@ -1,6 +1,6 @@
 # Watch CMS based on Strapi/Next ( tried to replicate https://richardmille.com )
 
-![LaunchPad](./LaunchPad.jpg)
+![LaunchPad](./richardmille.png)
 
 Welcome aboard **LaunchPad**, the official Strapi demo application, where we launch your content into the stratosphere at the speed of  *"we-can't-even-measure-it!"*.
 This repository contains the following:
