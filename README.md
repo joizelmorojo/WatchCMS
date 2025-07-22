@@ -1,4 +1,4 @@
-# LaunchPad - Official Strapi Demo
+# Watch CMS based on Strapi/Next ( tried to replicate https://richardmille.com )
 
 ![LaunchPad](./LaunchPad.jpg)
 
